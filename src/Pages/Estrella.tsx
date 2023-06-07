@@ -3,8 +3,8 @@ import axios from 'axios';
 import {Star} from "../Interfaces/Star";
 
 const Estrella: React.FC = () => {
-    const baseUrl: any = process.env.REACT_APP_API_URL_STARS
-    const apiKey: any = process.env.REACT_APP_API_KEY
+    const baseUrl: string = "http://ec2-52-15-232-167.us-east-2.compute.amazonaws.com:8081"
+    const apiKey: string = "apiKey=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWxpIiwiaWQiOjIsImlhdCI6MTY4NjEyNzk5OSwiZXhwIjoxNjg2OTkxOTk5fQ.0IJKVscnGy7MEHCJKMFmRiBNNyRuG3-qfuWEEQ-yNqg"
     const [data, setData] = useState<Star[]>([]);
 
 
