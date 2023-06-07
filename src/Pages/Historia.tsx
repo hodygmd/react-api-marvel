@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Historia() {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get(`http://gateway.marvel.com/v1/public/stories?ts=1&apikey=d781254a480edce1c3a28770fb303244&hash=85e2f7ba75867851a2fb9d7ea4d5764a`)
+        axios.get(`https://gateway.marvel.com/v1/public/stories?ts=1&apikey=d781254a480edce1c3a28770fb303244&hash=85e2f7ba75867851a2fb9d7ea4d5764a`)
             .then(response => {
                 console.log(response.data.data.results)
                 setData(response.data.data.results);
