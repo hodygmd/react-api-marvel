@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {DistanceUnit, Star, Type} from "../Interfaces/Star";
+import {Star} from "../Interfaces/Star";
 
 const Estrella: React.FC = () => {
     const baseUrl: any = process.env.REACT_APP_API_URL_STARS
