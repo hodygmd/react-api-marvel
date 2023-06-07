@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import Estrella from "./Pages/Estrella";
 import Tipos from "./Pages/Tipos";
 import UnidadesDistancia from "./Pages/UnidadesDistancia";
+import Event from "./Pages/Event";
+import Historia from "./Pages/Historia";
 function App() {
     return (
         <>
@@ -13,21 +15,29 @@ function App() {
                         <div className="container-fluid">
                                 <div className="navbar-nav mt-4">
                                     <div className="nav-item ms-4">
-                                        <Link to="/"><button className="btn btn-primary text-dark button mb-4"><span>Objecto Astronomico</span></button></Link>
+                                        <Link to="/"><button className="btn btn-primary text-dark button mb-4"><span>Personajes</span></button></Link>
                                     </div>
                                     <div className="nav-item ms-4">
-                                        <Link to="/tipos"><button className="btn btn-primary text-dark button mb-4"><span>Tipos de Objetos</span></button></Link>
+                                        <Link to="/series"><button className="btn btn-primary text-dark button mb-4"><span>Series</span></button></Link>
                                     </div>
                                     <div className="nav-item ms-4">
-                                        <Link to="/distancias"><button className="btn btn-primary text-dark button mb-4"><span>Unidades de Distancia</span></button></Link>
+                                        <Link to="/comics"><button className="btn btn-primary text-dark button mb-4"><span>Comics</span></button></Link>
+                                    </div>
+                                    <div className="nav-item ms-4">
+                                        <Link to="/eventos"><button className="btn btn-primary text-dark button mb-4"><span>Eventos</span></button></Link>
+                                    </div>
+                                    <div className="nav-item ms-4">
+                                        <Link to="/historias"><button className="btn btn-primary text-dark button mb-4"><span>Historia</span></button></Link>
                                     </div>
                                 </div>
                         </div>
                     </nav>
                     <Routes>
                         <Route path='/' element={<Estrella/>}/>
-                        <Route path='/tipos' element={<Tipos/>}/>
-                        <Route path='/distancias' element={<UnidadesDistancia/>}/>
+                        <Route path='/series' element={<Tipos/>}/>
+                        <Route path='/comics' element={<UnidadesDistancia/>}/>
+                        <Route path='/eventos' element={<Event/>}/>
+                        <Route path='/historias' element={<Historia/>}/>
                         <Route path="*" element={<NoMatch/>}/>
                     </Routes>
                 </Router>

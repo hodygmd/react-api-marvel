@@ -13,7 +13,8 @@ body {
   background-size: cover;*/
   background-size: 500%;
   animation: fanimado 10s infinite;
-  height: 100vh;
+  min-height: 100vh;
+  height: max-content;
 }
 @keyframes fanimado {
   0% {
