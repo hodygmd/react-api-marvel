@@ -6,34 +6,13 @@ const Estrella: React.FC = () => {
     const baseUrl: any = process.env.REACT_APP_API_URL_STARS
     const apiKey: any = process.env.REACT_APP_API_KEY
     const [data, setData] = useState<Star[]>([]);
-    const [distance, setDistance] = useState<DistanceUnit[]>([]);
-    const [type, setType] = useState<Type[]>([]);
+
 
     useEffect(() => {
         axios.get<Star[]>(`${baseUrl}/stars?${apiKey}`)
             .then(response => {
                 //console.log(response.data)
                 setData(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }, []);
-    useEffect(() => {
-        axios.get<DistanceUnit[]>(`${baseUrl}/distance_units?${apiKey}`)
-            .then(response => {
-                //console.log(response.data)
-                setDistance(response.data)
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }, []);
-    useEffect(() => {
-        axios.get<Type[]>(`${baseUrl}/star-types?${apiKey}`)
-            .then(response => {
-                //console.log(response.data)
-                setType(response.data)
             })
             .catch(error => {
                 console.log(error);
