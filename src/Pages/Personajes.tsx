@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 //import {Star} from "../Interfaces/Star";
 
-const Estrella: React.FC = () => {
+const Personajes: React.FC = () => {
     /*const baseUrl: string = "http://ec2-52-15-232-167.us-east-2.compute.amazonaws.com:8081"
     const apiKey: string = "apiKey=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWxpIiwiaWQiOjIsImlhdCI6MTY4NjEyNzk5OSwiZXhwIjoxNjg2OTkxOTk5fQ.0IJKVscnGy7MEHCJKMFmRiBNNyRuG3-qfuWEEQ-yNqg"
     const [data, setData] = useState<Star[]>([]);
@@ -60,4 +60,4 @@ const Estrella: React.FC = () => {
     );
 };
 
-export default Estrella;
+export default Personajes;
