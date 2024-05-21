@@ -4,23 +4,9 @@ import axios from "axios";
 import '../App.css';
 
 export default function Comics() {
-    /*const baseUrl: string = "http://ec2-52-15-232-167.us-east-2.compute.amazonaws.com:8081/distance_units"
-    const apiKey: string = "apiKey=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWxpIiwiaWQiOjIsImlhdCI6MTY4NjEyNzk5OSwiZXhwIjoxNjg2OTkxOTk5fQ.0IJKVscnGy7MEHCJKMFmRiBNNyRuG3-qfuWEEQ-yNqg"
-    const [data, setData] = useState<DistanceUnit[]>([]);
-
-    useEffect(() => {
-        axios.get<DistanceUnit[]>(`${baseUrl}?${apiKey}`)
-            .then(response => {
-                console.log(response.data)
-                setData(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }, []);*/
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get(`https://gateway.marvel.com/v1/public/comics?ts=1&apikey=d781254a480edce1c3a28770fb303244&hash=85e2f7ba75867851a2fb9d7ea4d5764a`)
+        axios.get(`${process.env.REACT_APP_API_URL_COMICS}?ts=1&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_HASH}`)
             .then(response => {
                 console.log(response.data.data.results)
                 setData(response.data.data.results);
